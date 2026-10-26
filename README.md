@@ -3,15 +3,7 @@
 
 ## Introduction
 
-This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about
-Swagger at [https://swagger.io](https://swagger.io). In the third iteration of the pet store, we've switched to the design first approach!
-You can now help us improve the API whether it's by making changes to the definition itself or to the code.
-That way, with time, we can improve the API in general, and expose some of the new features in OAS3.
-
-Some useful links:
-
-- [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)
-- [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)
+Sample Pet Store Server based on the OpenAPI 3.0 specification.
 
 Find out more about Swagger: [https://swagger.io](https://swagger.io)
 
@@ -23,12 +15,12 @@ Install the SDK by adding the following dependency in your project's pom.xml fil
 <dependency>
   <groupId>io.github.HassanSattar-301</groupId>
   <artifactId>first-package-name</artifactId>
-  <version>1.5.0</version>
+  <version>1.5.1</version>
 </dependency>
 ```
 
 You can also view the package at:
-https://central.sonatype.com/artifact/io.github.HassanSattar-301/first-package-name/1.5.0
+https://central.sonatype.com/artifact/io.github.HassanSattar-301/first-package-name/1.5.1
 
 ## Initialize the API Client
 
