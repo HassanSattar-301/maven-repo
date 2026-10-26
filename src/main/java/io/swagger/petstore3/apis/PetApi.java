@@ -16,9 +16,9 @@ import io.swagger.petstore3.Server;
 import io.swagger.petstore3.exceptions.ApiException;
 import io.swagger.petstore3.http.request.HttpMethod;
 import io.swagger.petstore3.http.response.ApiResponse;
-import io.swagger.petstore3.models.ApiResponse;
 import io.swagger.petstore3.models.Category;
 import io.swagger.petstore3.models.Pet;
+import io.swagger.petstore3.models.PetApiResponse;
 import io.swagger.petstore3.models.PetStatus;
 import io.swagger.petstore3.models.Tag;
 import io.swagger.petstore3.utilities.FileWrapper;
@@ -552,11 +552,11 @@ public final class PetApi extends BaseApi {
      * @param  petId  Required parameter: ID of pet to update
      * @param  additionalMetadata  Optional parameter: Additional Metadata
      * @param  body  Optional parameter:
-     * @return    Returns the ApiResponse wrapped in ApiResponse response from the API call
+     * @return    Returns the PetApiResponse wrapped in ApiResponse response from the API call
      * @throws    ApiException    Represents error response from the server.
      * @throws    IOException    Signals that an I/O exception of some sort has occurred.
      */
-    public ApiResponse<ApiResponse> uploadFile(
+    public ApiResponse<PetApiResponse> uploadFile(
             final long petId,
             final String additionalMetadata,
             final FileWrapper body) throws ApiException, IOException {
@@ -568,9 +568,9 @@ public final class PetApi extends BaseApi {
      * @param  petId  Required parameter: ID of pet to update
      * @param  additionalMetadata  Optional parameter: Additional Metadata
      * @param  body  Optional parameter:
-     * @return    Returns the ApiResponse wrapped in ApiResponse response from the API call
+     * @return    Returns the PetApiResponse wrapped in ApiResponse response from the API call
      */
-    public CompletableFuture<ApiResponse<ApiResponse>> uploadFileAsync(
+    public CompletableFuture<ApiResponse<PetApiResponse>> uploadFileAsync(
             final long petId,
             final String additionalMetadata,
             final FileWrapper body) {
@@ -584,11 +584,11 @@ public final class PetApi extends BaseApi {
     /**
      * Builds the ApiCall object for uploadFile.
      */
-    private ApiCall<ApiResponse<ApiResponse>, ApiException> prepareUploadFileRequest(
+    private ApiCall<ApiResponse<PetApiResponse>, ApiException> prepareUploadFileRequest(
             final long petId,
             final String additionalMetadata,
             final FileWrapper body) {
-        return new ApiCall.Builder<ApiResponse<ApiResponse>, ApiException>()
+        return new ApiCall.Builder<ApiResponse<PetApiResponse>, ApiException>()
                 .globalConfig(getGlobalConfiguration())
                 .requestBuilder(requestBuilder -> requestBuilder
                         .server(Server.ENUM_DEFAULT.value())
@@ -610,7 +610,7 @@ public final class PetApi extends BaseApi {
                 .responseHandler(responseHandler -> responseHandler
                         .responseClassType(ResponseClassType.API_RESPONSE)
                         .apiResponseDeserializer(
-                                response -> ApiHelper.deserialize(response, ApiResponse.class))
+                                response -> ApiHelper.deserialize(response, PetApiResponse.class))
                         .nullify404(false)
                         .localErrorCase("400",
                                  ErrorCase.setReason("No file uploaded",

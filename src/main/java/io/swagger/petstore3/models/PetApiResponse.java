@@ -17,9 +17,9 @@ import java.util.Map;
 import javax.xml.bind.annotation.XmlElement;
 
 /**
- * This is a model class for ApiResponse type.
+ * This is a model class for PetApiResponse type.
  */
-public class ApiResponse {
+public class PetApiResponse {
     private Integer code;
     private String type;
     private String message;
@@ -29,7 +29,7 @@ public class ApiResponse {
     /**
      * Default constructor.
      */
-    public ApiResponse() {
+    public PetApiResponse() {
     }
 
     /**
@@ -38,7 +38,7 @@ public class ApiResponse {
      * @param  type  String value for type.
      * @param  message  String value for message.
      */
-    public ApiResponse(
+    public PetApiResponse(
             Integer code,
             String type,
             String message) {
@@ -140,19 +140,19 @@ public class ApiResponse {
     }
 
     /**
-     * Converts this ApiResponse into string format.
+     * Converts this PetApiResponse into string format.
      * @return String representation of this class
      */
     @Override
     public String toString() {
-        return "ApiResponse [" + "code=" + code + ", type=" + type + ", message=" + message
+        return "PetApiResponse [" + "code=" + code + ", type=" + type + ", message=" + message
                 + ", additionalProperties=" + additionalProperties + "]";
     }
 
     /**
-     * Builds a new {@link ApiResponse.Builder} object.
+     * Builds a new {@link PetApiResponse.Builder} object.
      * Creates the instance with the state of the current model.
-     * @return a new {@link ApiResponse.Builder} object
+     * @return a new {@link PetApiResponse.Builder} object
      */
     public Builder toBuilder() {
         Builder builder = new Builder()
@@ -164,7 +164,7 @@ public class ApiResponse {
     }
 
     /**
-     * Class to build instances of {@link ApiResponse}.
+     * Class to build instances of {@link PetApiResponse}.
      */
     public static class Builder {
         private Integer code;
@@ -217,12 +217,12 @@ public class ApiResponse {
         }
 
         /**
-         * Builds a new {@link ApiResponse} object using the set fields.
-         * @return {@link ApiResponse}
+         * Builds a new {@link PetApiResponse} object using the set fields.
+         * @return {@link PetApiResponse}
          */
-        public ApiResponse build() {
-            ApiResponse model =
-                    new ApiResponse(code, type, message);
+        public PetApiResponse build() {
+            PetApiResponse model =
+                    new PetApiResponse(code, type, message);
             model.additionalProperties = additionalProperties;
             return model;
         }

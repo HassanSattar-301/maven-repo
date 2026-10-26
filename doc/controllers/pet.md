@@ -457,7 +457,7 @@ petApi.deletePetAsync(petId, null).thenAccept(result -> {
 Upload image of the pet.
 
 ```java
-CompletableFuture<ApiResponse<ApiResponse>> uploadFileAsync(
+CompletableFuture<ApiResponse<PetApiResponse>> uploadFileAsync(
     final long petId,
     final String additionalMetadata,
     final FileWrapper body)
@@ -485,7 +485,7 @@ This endpoint requires [petstore_auth](../../doc/auth/oauth-2-implicit-grant.md)
 
 **200**: successful operation
 
-This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `getResult()` getter of this instance returns the response data which is of type [`ApiResponse`](../../doc/models/api-response.md).
+This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `getResult()` getter of this instance returns the response data which is of type [`PetApiResponse`](../../doc/models/pet-api-response.md).
 
 ## Example Usage
 

@@ -1,11 +1,11 @@
 
-# Api Response
+# Pet Api Response
 
 *This model accepts additional fields of type Object.*
 
 ## Structure
 
-`ApiResponse`
+`PetApiResponse`
 
 ## Fields
 
@@ -20,13 +20,13 @@
 
 ```java
 import io.swagger.petstore3.ApiHelper;
-import io.swagger.petstore3.models.ApiResponse;
+import io.swagger.petstore3.models.PetApiResponse;
 import java.io.IOException;
 
-ApiResponse apiResponse = new ApiResponse.Builder()
-    .code(146)
-    .type("type4")
-    .message("message4")
+PetApiResponse petApiResponse = new PetApiResponse.Builder()
+    .code(186)
+    .type("type8")
+    .message("message8")
 .additionalProperty("exampleAdditionalProperty", ApiHelper.deserialize("{\"key1\":\"val1\",\"key2\":\"val2\"}"))
     .build();
 ```
