@@ -13,14 +13,14 @@ Install the SDK by adding the following dependency in your project's pom.xml fil
 
 ```xml
 <dependency>
-  <groupId>io.github.HassanSattar-301</groupId>
+  <groupId>io.github.hassansattar-301</groupId>
   <artifactId>first-package-name</artifactId>
-  <version>1.5.1</version>
+  <version>1.5.2</version>
 </dependency>
 ```
 
 You can also view the package at:
-https://central.sonatype.com/artifact/io.github.HassanSattar-301/first-package-name/1.5.1
+https://central.sonatype.com/artifact/io.github.hassansattar-301/first-package-name/1.5.2
 
 ## Initialize the API Client
 
